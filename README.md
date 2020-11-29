@@ -4,7 +4,7 @@
 
 ## Overview of Design
 
-**insert image here**
+<p align="left"><img src="https://user-images.githubusercontent.com/47607653/100549270-d6462780-3226-11eb-9fbb-97508216af2c.png" alt="TSP" width="500"/></p>
 
 - The travelling salesman problem is a well known [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness) that is used in computer science for combinatorial optimizations.
 - Our design employs the use of structures and helper functions to try and solve this problem.
