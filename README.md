@@ -43,6 +43,16 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_2opt(s
 // Travelling Salesman Using Genetic Algorithm
 std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_GeneticAlgo(std::vector<std::string> &location_ids);
 ```
+- **Autocomplete** - To take a part of a location name from the user and return all places that contain that part of the name.
+- **GetPosition** - To find the latitude and longitude of a given location
+- **CalculateShortestPath** - Calculate the shortest path between 2 locations
+- **TravellingTrojan** -  Given a set of locations, find the shortest route between after visiting every location once and returning using Brute Force.
+- **Heuristical solutions to TravellingTrojan using 2_opt and GeneticAlgo.**
+
+## Updated Menu
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550142-b285e000-322c-11eb-9e02-90bee1b77302.PNG" alt="NewMenu" width="500"/></p>
+
+- Our updated menu allowing 7 options.
 
 ## Generating the weight matrix
 <p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549604-c92a3800-3228-11eb-8bb8-d6264d32434b.PNG" alt="GenWeightMatrix" width="500"/></p>
@@ -905,6 +915,15 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
   return progress;
 }
 ```
+---
+### Results
+#### Shortest Path Highlighted
+##### Target to Popeyes Louisiana Kitchen - A distance of 1.53852 miles
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550161-dcd79d80-322c-11eb-9bfa-84012dbac1d6.PNG" alt="TargetToPopeyes" width="500"/></p>
+
+##### Ralphs to ChickFil-A - A distance of 0.74044 miles
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550163-e234e800-322c-11eb-8b47-0180cb299dee.PNG" alt="RalphsToChickFilA" width="500"/></p>
+
 ---
 ### Testing the Algorithms
 - The algorithms were tested using the tests provided by the TAs for validation of the solution.
