@@ -45,26 +45,30 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_Geneti
 ```
 
 ## Generating the weight matrix
-**insert image**
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549604-c92a3800-3228-11eb-8bb8-d6264d32434b.PNG" alt="GenWeightMatrix" width="500"/></p>
+
 - Objective was to create an adjacency matrix while mapping every location id to an index.
 - This way the core functions needed minimal alteration.
 - Made implementation more modular.
 
 ## Shortest Path - Dijkstra Priority Queue
-**insert image**
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549661-15757800-3229-11eb-9825-2d8727353a41.PNG" alt="SP_Djikstra" width="500"/></p>
+
 - Idea is to traverse through graph and find next minimum distanced node and update distances of all children.
 - Store parent nodes for each node in every iteration.
 - Leverages Priority queue functionality to efficiently obtain next minimum unvisited node.
 - Parent nodes are accessed and recursed to obtain the path in addition to the shortest distance.
 
 ## Travelling Salesman – Brute Force
-**insert image**
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549672-2aeaa200-3229-11eb-80af-e367c020347d.PNG" alt="TSP_brute" width="500"/></p>
+
 - Aimed at solving the TSP using a greedy technique. 
 - Method always returns an optimal result but computationally expensive.
 - Intuitive technique inspired from DFS search + Permutations.
 
 ## Travelling Salesman – 2 opt
-**insert image**
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549679-40f86280-3229-11eb-94ab-d3c72d6d8ab5.PNG" alt="TSP_2Opt" width="500"/></p>
+
 - Aimed at solving the TSP using an approximate technique.
 - Utilizes 2-edge swapping
 - Method does not always return optimal distance / path , but it is expected to give a “very good” approximate of the ideal output.
@@ -901,6 +905,7 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
   return progress;
 }
 ```
+---
 ### Testing the Algorithms
 - The algorithms were tested using the tests provided by the TAs for validation of the solution.
 - Designed tests ourselves to verify our code’s error handling. This was done in 2 ways.
@@ -909,6 +914,8 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 - Designed test cases to handle corner cases so that outlying inputs/conditions would not affect our final result.
     - For example, tested for Node ID not available in the .CSV file to alert the user.
 -
+
+---
 
 ### Learnings - _Ashwin Sivakumar_
 - **Intuition behind shortest path algorithms.** Knowledge gained will help take an efficient and informed approach before tackling a problem.
