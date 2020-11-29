@@ -186,7 +186,7 @@ double TrojanMap::CalculatePathLength(const std::vector<std::string> &path)
 - Returns a double.
 - O(path.size() - 1).
 
-### GetNode and GetNodeFromName
+### GetNode 
 ```cpp
 Node TrojanMap::GetNode(std::string id)
 {
@@ -201,8 +201,12 @@ Node TrojanMap::GetNode(std::string id)
        }
      }
 }
+```
+- The id of the node is compared to the ids present in the .CSV file and the subsequent node is returned.
+- O(n)
 
-
+### GetNodeFromName
+```cpp
 Node TrojanMap::GetNodeFromName(std::string locname)
 {
   std::map<std::string, Node>::iterator it;
@@ -218,10 +222,8 @@ Node TrojanMap::GetNodeFromName(std::string locname)
      }
 }
 ```
-- The id of the node is compared to the ids present in the .CSV file and the subsequent node is returned.
-- O()
 - The location name is searched for in the .CSV file and then corresponding name is returned. 
-- O()
+- O(n)
 
 ### Autocomplete
 ```cpp
@@ -231,7 +233,7 @@ std::vector<std::string> TrojanMap::Autocomplete(std::string name)
 - A map is created with the string as the key and the Node as the data.
 - A temporary string is created to hold a part of the name. This temp string is used to scan the .CSV file and return strings which match the temp string.
 - If they match the temp string, the string is pushed into the results vector and returned to the user.
-- O()
+- O(n)
 
 ### GetPosition
 ```cpp
