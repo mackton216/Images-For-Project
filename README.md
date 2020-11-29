@@ -945,7 +945,9 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 
 ### Learnings - _Mackton Vishal Mendonca_
 
-- Research on this problem revealed some non computer science related problems that are solved using TSP. (**Physarum polycephalum**, an amoeboid that adapts its morphology to create an efficient path between its food sources).
+- Research on this problem revealed some non computer science related problems that are solved using TSP. 
+<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550377-78b5d900-322e-11eb-9a5b-291159e68eaf.gif" alt="Amoeba" width="200"/></p>
+(**Physarum polycephalum**, an amoeboid that adapts its morphology to create an efficient path between its food sources).
 - Substituting cities and travelling distances for chip components and connecting circuits, the potential of TSP in chip design to integrate more and more transistors on a chip.
 - Deeper understanding of object oriented programming for data extraction and usage of structures in C++.
 - Understanding the importance of testing an application to not just provide a solution but also catch “not solutions”. To not only catch bugs but also to improve the quality of code.
