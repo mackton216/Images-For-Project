@@ -4,7 +4,7 @@
 
 ## Overview of Design
 
-<p align="left"><img src="https://user-images.githubusercontent.com/47607653/100549270-d6462780-3226-11eb-9fbb-97508216af2c.png" alt="TSP" width="500"/></p>
+<p align="left"><img src="img/TravellingSalesman.png" alt="TSP" width="500"/></p>
 
 - The travelling salesman problem is a well known [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness) that is used in computer science for combinatorial optimizations.
 - Our design employs the use of structures and helper functions to try and solve this problem.
@@ -50,19 +50,19 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_Geneti
 - **Heuristical solutions to TravellingTrojan using 2_opt and GeneticAlgo.**
 
 ## Updated Menu
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550142-b285e000-322c-11eb-9e02-90bee1b77302.PNG" alt="NewMenu" width="500"/></p>
+<p align="center"><img src="img/NewMenu.PNG" alt="NewMenu" width="500"/></p>
 
 - Our updated menu allowing 7 options.
 
 ## Generating the weight matrix
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549604-c92a3800-3228-11eb-8bb8-d6264d32434b.PNG" alt="GenWeightMatrix" width="500"/></p>
+<p align="center"><img src="img/GenWeightMatrix.PNG" alt="GenWeightMatrix" width="500"/></p>
 
 - Objective was to create an adjacency matrix while mapping every location id to an index.
 - This way the core functions needed minimal alteration.
 - Made implementation more modular.
 
 ## Shortest Path - Dijkstra Priority Queue
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549661-15757800-3229-11eb-9825-2d8727353a41.PNG" alt="SP_Djikstra" width="500"/></p>
+<p align="center"><img src="img/ShortestPathDjikstra.PNG" alt="SP_Djikstra" width="500"/></p>
 
 - Idea is to traverse through graph and find next minimum distanced node and update distances of all children.
 - Store parent nodes for each node in every iteration.
@@ -70,14 +70,14 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_Geneti
 - Parent nodes are accessed and recursed to obtain the path in addition to the shortest distance.
 
 ## Travelling Salesman – Brute Force
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549672-2aeaa200-3229-11eb-80af-e367c020347d.PNG" alt="TSP_brute" width="500"/></p>
+<p align="center"><img src="img/TSPBruteForce.PNG" alt="TSP_brute" width="500"/></p>
 
 - Aimed at solving the TSP using a greedy technique. 
 - Method always returns an optimal result but computationally expensive.
 - Intuitive technique inspired from DFS search + Permutations.
 
 ## Travelling Salesman – 2 opt
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100549679-40f86280-3229-11eb-94ab-d3c72d6d8ab5.PNG" alt="TSP_2Opt" width="500"/></p>
+<p align="center"><img src="img/TSP2-Opt.PNG" alt="TSP_2Opt" width="500"/></p>
 
 - Aimed at solving the TSP using an approximate technique.
 - Utilizes 2-edge swapping
@@ -108,7 +108,7 @@ std::string TrojanMap::GetName(std::string id)
   return data[id].name;
 }
 ```
-- Using the attributes of the variable ‘data’ defined in the cpp.h file.
+- Using the attributes of the map of strings and Nodes ‘data’ defined in the cpp.h file.
 - Data is a map consisting of strings and Nodes defined in the .csv file.
 - String “id” is user input and is mapped to the latitude, longitude and name (if any) of the respective Node id.
 - Each of these have a time complexity of O(1).
@@ -344,11 +344,25 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 ---
 ### Results
 #### Shortest Path Highlighted
-##### Target to Popeyes Louisiana Kitchen - A distance of 1.53852 miles
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550161-dcd79d80-322c-11eb-9bfa-84012dbac1d6.PNG" alt="TargetToPopeyes" width="500"/></p>
+##### Target to Popeyes Louisiana Kitchen - A distance of 0.74044 miles
 
-##### Ralphs to ChickFil-A - A distance of 0.74044 miles
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550163-e234e800-322c-11eb-8b47-0180cb299dee.PNG" alt="RalphsToChickFilA" width="500"/></p>
+<p align="center"><img src="img/SP_target_popeyes.PNG" alt="TargetToPopeyes" width="500"/></p>
+
+##### Compared to Google Maps
+
+<p align="center"><img src="img/GMaps_target_popeyes.PNG" alt="TargetToPopeyes" width="500"/></p>
+
+##### Ralphs to ChickFil-A - A distance of 1.53852 miles
+
+<p align="center"><img src="img/SP_ralphs_chickfila.PNG" alt="RalphsToChickFilA" width="500"/></p>
+
+##### Compared to Google Maps
+
+<p align="center"><img src="img/GMaps_ralphs_chickfila.PNG" alt="TargetToPopeyes" width="500"/></p>
+
+##### Travelling Salesman Animation
+
+<p align="center"><img src="img/TSP.gif" alt="TargetToPopeyes" width="500"/></p>
 
 ###### Timing Comparison of the different algorithms
 - The time taken on our computers by each of the 3 algorithms are given below
@@ -381,13 +395,14 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 
 ### Learnings - _Mackton Vishal Mendonca_
 
-<p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550377-78b5d900-322e-11eb-9a5b-291159e68eaf.gif" alt="Amoeba" width="200"/></p>
+<p align="center"><img src="img/Learnings.gif" alt="Amoeba" width="200"/></p>
 
 - Research on this problem revealed some non computer science related problems that are solved using TSP. 
 - (**Physarum polycephalum**, an amoeboid that adapts its morphology to create an efficient path between its food sources).
 - Substituting cities and travelling distances for chip components and connecting circuits, the potential of TSP in chip design to integrate more and more transistors on a chip.
 - Deeper understanding of object oriented programming for data extraction and usage of structures in C++.
 - Understanding the importance of testing an application to not just provide a solution but also catch “not solutions”. To not only catch bugs but also to improve the quality of code.
+- This project also helped me understand Unix commands as well as the usage of Github.
 
 
 
