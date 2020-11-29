@@ -350,6 +350,16 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 ##### Ralphs to ChickFil-A - A distance of 0.74044 miles
 <p align="center"><img src="https://user-images.githubusercontent.com/47607653/100550163-e234e800-322c-11eb-8b47-0180cb299dee.PNG" alt="RalphsToChickFilA" width="500"/></p>
 
+###### Timing Comparison of the different algorithms
+- The time taken on our computers by each of the 3 algorithms are given below
+    - Travelling salesman using Brute Force - 13.14 seconds
+    - Travelling salesman using 2-Opt - 1.435 seconds
+    - Travelling salesman using Genetic Algorithm - 4.385 seconds
+- By taking the ratios between the 3 algorithms using Brute Force as a baseline we find
+    - 2-Opt is 9.156 times faster than Brute Force
+    - Genetic Algorithm is 2.996 times faster than Brute Force
+    We find that the genetic Algorithm is faster than the Brute Force. However, it is more accurate than 2-Opt.
+
 ---
 ### Testing the Algorithms
 - The algorithms were tested using the tests provided by the TAs for validation of the solution.
